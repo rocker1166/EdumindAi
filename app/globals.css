@@ -26,8 +26,8 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.active {
+  color: #0070f3; /* Change to your desired color */
+  font:bold;
+  /* Add any other styling properties as needed */
 }
