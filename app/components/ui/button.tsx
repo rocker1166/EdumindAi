@@ -23,7 +23,7 @@ export default function Placeholder() {
   
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission behavior
-    router.push(`/dashboard?inputValue=${inputValue}`) 
+    router.push(`/dashboard`) 
   };
   return (
     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">
