@@ -1,8 +1,8 @@
 "use client";
-
+import { useState, useContext, FormEvent } from 'react';
 import { useRouter } from "next/navigation";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
-import { useState } from "react";
+import InputContext from '@/app/context/InputContext';
 
 export default function Placeholder() {
   const placeholders = [
@@ -14,6 +14,7 @@ export default function Placeholder() {
   ];
 
   const [inputValue, setInputValue] = useState('');
+  const { setInput } = useContext(InputContext);
   const router = useRouter();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -21,9 +22,10 @@ export default function Placeholder() {
     setInputValue(e.target.value);
   };
   
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    router.push(`/dashboard`) 
+  const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Prevent default form submission
+    setInput(inputValue); // Update the global context
+    router.push('/topic/dashboard'); // Navigate to dashboard
   };
   return (
     <div className="h-[40rem] flex flex-col justify-center  items-center px-4">

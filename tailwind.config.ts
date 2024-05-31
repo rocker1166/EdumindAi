@@ -61,7 +61,8 @@ module.exports = {
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
     },
-  ],
+      require("tailwindcss-animate")
+],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

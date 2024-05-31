@@ -7,7 +7,7 @@ import Link from 'next/link'
     <div className="flex items-center justify-between h-16">
       <span className="text-5xl text-white font-semibold"><Link href='/'>🤖</Link> </span>
       <div className="flex space-x-4 text-white">
-      <Link href="/dashboard">Dashboard</Link>
+      <Link href="/topic/dashboard">Dashboard</Link>
         <Link  href="#">Documentation</Link>
         <Link className=' hidden md:block ' href="#">Contact</Link>
         <button className="relative   overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">

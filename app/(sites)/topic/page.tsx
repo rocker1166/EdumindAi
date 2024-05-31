@@ -13,7 +13,7 @@ export default function VortexDemoSecond() {
         baseHue={120}
         className=" md:px-10  py-4 w-full h-full"
       >
-       <Nav />
+      
        <Placeholder />
       </Vortex>
       </div>
